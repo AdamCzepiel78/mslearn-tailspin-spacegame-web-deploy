@@ -71,7 +71,7 @@ stages:
           - task: AzureWebApp@1
             displayName: 'Azure App Service Deploy: website'
             inputs:
-              azureSubscription: "7d6c8c18-be16-495e-9e8e-65c92993e378"
+              azureSubscription: AzureTestDevopsSC
               appName: $(WebAppName)
               package: $(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip
 
