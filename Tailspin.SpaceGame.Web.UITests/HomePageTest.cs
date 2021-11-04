@@ -4,8 +4,11 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections;
+using System.Text;
+using OpenQa.Selenium.IE;
 
 namespace UITests
 {
@@ -22,7 +25,7 @@ namespace UITests
             this.browser = browser;
         }
 
-        [OneTimeSetUp]
+        [TestInitialize()]
         public void Setup()
         {
             try
