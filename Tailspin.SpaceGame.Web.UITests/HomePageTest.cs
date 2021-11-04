@@ -10,8 +10,8 @@ using System.Collections;
 namespace UITests
 {
     [TestFixture("Chrome")]
-    //[TestFixture("Firefox")]
-    //[TestFixture("Edge")]
+    [TestFixture("Firefox")]
+    [TestFixture("Edge")]
     public class HomePageTest
     {
         private string browser;
@@ -35,7 +35,6 @@ namespace UITests
                         Environment.GetEnvironmentVariable("ChromeWebDriver")
                     );
                     break;
-                 /*
                   case "Firefox":
                     driver = new FirefoxDriver(
                         Environment.GetEnvironmentVariable("GeckoWebDriver")
@@ -50,7 +49,6 @@ namespace UITests
                         }
                     );
                     break;
-                */
                   default:
                     throw new ArgumentException($"'{browser}': Unknown browser");
                 }
