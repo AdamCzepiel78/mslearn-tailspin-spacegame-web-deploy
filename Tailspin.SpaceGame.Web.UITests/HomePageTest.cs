@@ -10,6 +10,7 @@ using System.Collections;
 namespace UITests
 {
     [TestFixture("Chrome")]
+    [TestFixture("Firefox")]
     [TestFixture("Edge")]
     public class HomePageTest
     {
@@ -32,6 +33,11 @@ namespace UITests
                   case "Chrome":
                     driver = new ChromeDriver(
                         Environment.GetEnvironmentVariable("ChromeWebDriver")
+                    );
+                    break;
+                  case "Firefox":
+                    driver = new FirefoxDriver(
+                        Environment.GetEnvironmentVariable("GeckoWebDriver")
                     );
                     break;
                   case "Edge":
@@ -73,7 +79,7 @@ namespace UITests
             }
         }
     
-        [OneTimeTearDown]
+        [TestCleanUp()]
         public void Cleanup()
         {
             if (driver != null)
