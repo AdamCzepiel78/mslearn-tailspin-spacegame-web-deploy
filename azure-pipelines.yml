@@ -136,7 +136,7 @@ stages:
           - task: AzureAppServiceManage@0
             displayName: Swap deployment slots
             inputs:
-              azureSubscription: Resource Manager - Tailspin - Space Game
+              azureSubscription: 'ServiceConnectionRelease'
               resourceGroupName: rg-sd-acz
               webAppName: $(WebAppNameStaging)
               sourceSlot: swap
